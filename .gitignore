@@ -1,0 +1,14 @@
+# Godot and .NET
+.godot/
+.mono/
+bin/
+obj/
+*.user
+export/
+export_presets.cfg
+# Test and capture output
+tests/results*.txt
+captures/
+# OS
+.DS_Store
+Thumbs.db

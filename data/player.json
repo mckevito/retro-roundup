@@ -1,0 +1,14 @@
+{
+  "_about": "First-person controls. Distances in metres, speeds in metres per second.",
+  "eye_height_m": 1.7,
+  "walk_speed": 3.2,
+  "run_speed": 6.0,
+  "acceleration": 12.0,
+  "mouse_sensitivity": 0.0022,
+  "pitch_limit_deg": 85.0,
+  "capsule_radius_m": 0.3,
+  "capsule_height_m": 1.8,
+  "gravity": 9.8,
+  "start_position": [0.0, 0.0, 0.0],
+  "start_look_deg": {"yaw": -9.0, "pitch": 14.0}
+}

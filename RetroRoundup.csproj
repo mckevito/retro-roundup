@@ -1,0 +1,25 @@
+<Project Sdk="Godot.NET.Sdk/4.7.2">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <RootNamespace>RetroRoundup</RootNamespace>
+    <Nullable>disable</Nullable>
+    <LangVersion>12</LangVersion>
+  </PropertyGroup>
+
+  <!--
+    Windows trap: Godot.NET.Sdk's reference check fails with MSB4113 when the NuGet package folder sits under a
+    path that contains an apostrophe (for example a Windows user folder whose name has one). When that happens,
+    restore into a folder without an apostrophe instead. The property functions are unquoted on purpose: quoting a
+    value that holds an apostrophe is exactly what breaks MSBuild.
+  -->
+  <PropertyGroup>
+    <_RrNuGetRoot Condition="$(NUGET_PACKAGES.Length) &gt; 0">$(NUGET_PACKAGES)</_RrNuGetRoot>
+    <_RrNuGetRoot Condition="$(NUGET_PACKAGES.Length) == 0 And $(OS) == Windows_NT">$(USERPROFILE)\.nuget\packages</_RrNuGetRoot>
+    <_RrNuGetRoot Condition="$(NUGET_PACKAGES.Length) == 0 And $(OS) != Windows_NT">$(HOME)/.nuget/packages</_RrNuGetRoot>
+  </PropertyGroup>
+  <PropertyGroup Condition="$(_RrNuGetRoot.Contains(&quot;'&quot;))">
+    <RestorePackagesPath Condition="$(OS) == Windows_NT">$(PUBLIC)\GodotNuGetPackages</RestorePackagesPath>
+    <RestorePackagesPath Condition="$(OS) != Windows_NT">/tmp/GodotNuGetPackages</RestorePackagesPath>
+  </PropertyGroup>
+</Project>

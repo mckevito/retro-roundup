@@ -1,0 +1,11 @@
+{
+  "_about": "The outline look: colours and line settings. Change numbers here, never in code.",
+  "line_color": [0.88, 0.27, 0.9],
+  "face_color": [0.0, 0.0, 0.0],
+  "sky_color": [0.0, 0.0, 0.0],
+  "glow": true,
+  "glow_intensity": 0.6,
+  "glow_bloom": 0.05,
+  "face_inset_m": 0.02,
+  "detail_offset_m": 0.03
+}

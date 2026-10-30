@@ -1,0 +1,66 @@
+{
+  "_about": "The proof-of-concept street. x is metres right of the road's centre, z is metres ahead of the start. Each building is a box: x0..x1 across, z0..z1 along the street, height in metres. 'street_side' is the face that looks onto the road. Balcony bays count from the near end.",
+  "road_half_width_m": 6.0,
+  "curb_height_m": 0.15,
+  "gutter_offset_m": 0.4,
+  "building_line_m": 11.0,
+  "street_length_m": 300.0,
+  "road_blocking_allowed_beyond_m": 200.0,
+  "centre_dash": {
+    "length_m": 3.0,
+    "gap_m": 6.0
+  },
+  "centre_line_gap_m": 0.12,
+  "pavement_joint_every_m": 4.0,
+  "pavement_joints_until_m": 150.0,
+  "crosswalk": {
+    "z0": 30.0,
+    "z1": 34.0,
+    "stripes": 8,
+    "stripe_width_m": 0.7,
+    "stripe_step_m": 1.4
+  },
+  "street_lights": {
+    "height_m": 7.0,
+    "arm_m": 1.6,
+    "left_z": [9, 45, 80, 115],
+    "right_z": [27, 63, 98, 133],
+    "offset_from_curb_m": 1.0,
+    "head_half_length_m": 0.35,
+    "head_half_width_m": 0.2,
+    "arm_rise_m": 0.4
+  },
+  "facade": {
+    "window_skip_chance": 0.06,
+    "window_width_share": 0.55,
+    "window_max_width_m": 2.2,
+    "window_height_share": 0.45,
+    "window_sill_share": 0.3,
+    "shop_window_height_share": 0.6,
+    "shop_window_sill_m": 0.5,
+    "door_width_m": 1.8,
+    "door_height_m": 2.4,
+    "awning_share": 0.85,
+    "balcony_depth_m": 1.5,
+    "balcony_rail_m": 1.1,
+    "balcony_gap_m": 0.3,
+    "balcony_door_width_m": 1.4,
+    "balcony_door_height_share": 0.7,
+    "seed": 7
+  },
+  "buildings": [
+    {"name": "the tower", "x0": 11, "x1": 31, "z0": 18, "z1": 58, "height": 126, "floors": 36, "street_side": "left", "bays_side": 10, "bays_front": 5, "balcony_bays": [ 0, 1, 5, 9 ], "shop": true},
+    {"x0": 11, "x1": 26, "z0": 62, "z1": 80, "height": 30, "floors": 9, "street_side": "left", "bays_side": 5, "bays_front": 4, "shop": true},
+    {"x0": 11, "x1": 24, "z0": 84, "z1": 110, "height": 46, "floors": 13, "street_side": "left", "bays_side": 7, "bays_front": 4, "shop": true},
+    {"x0": 11, "x1": 22, "z0": 114, "z1": 150, "height": 22, "floors": 6, "street_side": "left", "bays_side": 8, "bays_front": 3, "shop": true},
+    {"x0": -26, "x1": -11, "z0": 6, "z1": 20, "height": 14, "floors": 4, "street_side": "right", "bays_side": 4, "bays_front": 4, "shop": true},
+    {"x0": -24, "x1": -11, "z0": 22, "z1": 38, "height": 26, "floors": 7, "street_side": "right", "bays_side": 5, "bays_front": 4, "shop": true},
+    {"x0": -28, "x1": -11, "z0": 40, "z1": 54, "height": 11, "floors": 3, "street_side": "right", "bays_side": 4, "bays_front": 4, "shop": true},
+    {"x0": -26, "x1": -11, "z0": 56, "z1": 82, "height": 38, "floors": 11, "street_side": "right", "bays_side": 7, "bays_front": 5, "shop": true},
+    {"x0": -22, "x1": -11, "z0": 86, "z1": 104, "height": 18, "floors": 5, "street_side": "right", "bays_side": 5, "bays_front": 3, "shop": true},
+    {"x0": -24, "x1": -11, "z0": 108, "z1": 150, "height": 30, "floors": 8, "street_side": "right", "bays_side": 9, "bays_front": 3, "shop": true},
+    {"x0": -30, "x1": -8, "z0": 230, "z1": 260, "height": 60, "floors": 16, "street_side": "right", "bays_side": 4, "bays_front": 7, "shop": false},
+    {"x0": 8, "x1": 40, "z0": 240, "z1": 270, "height": 85, "floors": 22, "street_side": "left", "bays_side": 4, "bays_front": 9, "shop": false},
+    {"x0": -8, "x1": 8, "z0": 300, "z1": 320, "height": 40, "floors": 11, "street_side": "left", "bays_side": 3, "bays_front": 5, "shop": false}
+  ]
+}
